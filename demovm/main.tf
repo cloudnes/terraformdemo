@@ -423,9 +423,9 @@ resource "azurerm_virtual_machine_extension" "vm_extension_install_iis" {
 
   settings = <<SETTINGS
     {
-        "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools",
-        "fileUris":["https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/secure-iis.ps1"],
-        "commandToExecute":"powershell -ExecutionPolicy Unrestricted -File secure-iis.ps1"
+  
+        "fileUris":["https://raw.githubusercontent.com/cloudnes/terraformdemo/main/install-iis.ps1"],
+        "commandToExecute":"powershell -ExecutionPolicy Unrestricted -File install-iis.ps1"
     }
 SETTINGS
 }
