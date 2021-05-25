@@ -2,7 +2,7 @@ locals{
   #Base config
   location    = "East US 2"
   environment = "prod"
-  prefix      = "saul"
+  prefix      = "scajero"
   rg_name     = "${local.prefix}${local.environment}-RG"
   tenant_id   = data.azurerm_client_config.current.tenant_id
   object_id   = data.azurerm_client_config.current.object_id
