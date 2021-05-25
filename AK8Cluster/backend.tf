@@ -1,6 +1,13 @@
 provider "azurerm" {
   features {}
 }
+
+ backend "azurerm" {     
+ storage_account_name  = "backendtfscajero"     
+ container_name        = "tstate"     
+ key                   = "terraform.tfstate"   
+ } 
+
 terraform {
   required_providers {
     azurerm = {
